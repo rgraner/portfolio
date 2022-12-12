@@ -9,62 +9,114 @@
     <title>Portfolio</title>
 </head>
 <body>
-    <header>
-        <h2 class="logo">Ricardo Graner</h2>
-        <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </header>
+    <div class="dark-mode-toggle">
+        <div id="dark-mode">dark mode</div>
+        <div id="light-mode">light mode</div>
+    </div>
 
-    <main>
-        <section id="about-section">
-            <div class="heading">
-                <h2>about me</h2>
-                <p>A small introduction about myself</p>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <h2>Ricardo Graner</h2>
             </div>
-            <div class="section-content">
-                <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-                <img src="images/rlg-codecademy-portfolio-02.png" alt="">
-            </div>    
-        </section>
+            <ul>
+                <li><a href="#about-section">About Me</a></li>
+                <li><a href="#projects-section">Projects</a></li>
+                <li><a href="#skills-section">Skills</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>  
+        </header>
 
-        <section id="projects-section">
-            <div class="heading">
-                <h2>Projects</h2>
-                <p></p>
-            </div>
-            <div class="container">
-                <div class="box">
-                    <h3>Project 1</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
-                </div> 
-                <div class="box">
-                    <h3>Project 1</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
-                </div> 
-                <div class="box">
-                    <h3>Project 1</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
-                </div> 
-                <div class="box">
-                    <h3>Project 1</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
-                </div> 
-                <div class="box">
-                    <h3>Project 1</h3>
-                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
-                </div> 
-            </div>   
-        </section>
+        <main>
+            <section id="about-section">
+                <div class="heading">
+                    <h2>about me</h2>
+                    <p>A small introduction about myself</p>
+                </div>
+                <div class="section-content">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+                    <img src="images/rlg-codecademy-portfolio-02.png" alt="">
+                </div>    
+            </section>
 
-        <section id="skills-section">
+            <section id="projects-section">
+                <div class="heading">
+                    <h2>Projects</h2>
+                    <p></p>
+                </div>
+                <div class="items">
+                    <div class="item">
+                        <h3>Project 1</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
+                    </div> 
+                    <div class="item">
+                        <h3>Project 1</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
+                    </div> 
+                    <div class="item">
+                        <h3>Project 1</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
+                    </div> 
+                    <div class="item">
+                        <h3>Project 1</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
+                    </div> 
+                    <div class="item">
+                        <h3>Project 1</h3>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's...</p>
+                    </div> 
+                </div>   
+            </section>
 
-        </section>
-    </main>
+            <section id="skills-section">
+                <div class="heading">
+                    <h2>Skills</h2>
+                    <p>I can say i’m quite good at</p>
+                </div>
+                <div class="items box">
+                    <p><strong> HTML</strong></p>
+                    <p><strong>CSS</strong></p>
+                    <p><strong>JavaScript</strong></p>
+                    <p><strong>Python</strong></p>
+                    <p><strong>Django</strong></p>
+                    <p><strong>Pandas</strong></p>
+                    <p><strong>Git</strong></p>
+                    <p><strong>Github</strong></p>
+                </div>
+            </section>
+        </main>
+    </div>
       
 </body>
+<script>
+    const darkModeToggle = document.getElementById("dark-mode");
+    const lightModeToggle = document.getElementById("light-mode");
+    let darkNavItem = document.getElementsByTagName("a");
+   
+    function darkMode() {
+        document.body.style.backgroundColor = "#222";
+        document.body.style.color = "white";
+        darkModeToggle.style.display = "none";
+        lightModeToggle.style.display = "block";
+        for (let i = 0; i < darkNavItem.length; i++) {
+            darkNavItem[i].style.color = "white";
+        }
+    }
+
+    function lightMode() {
+        document.body.style.backgroundColor = "";
+        document.body.style.color = "";
+        darkModeToggle.style.display = "";
+        lightModeToggle.style.display = ""; 
+        for (let i = 0; i < darkNavItem.length; i++) {
+            darkNavItem[i].style.color = "";
+        } 
+    }
+    
+    lightModeToggle.onclick = lightMode;
+    darkModeToggle.onclick = darkMode;
+
+    
+</script>
 </html>
 
