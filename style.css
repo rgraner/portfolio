@@ -3,36 +3,18 @@
     padding: 0;
 }
 
+:root {
+    --dark-color: rgb(32, 32, 32);
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
-    color:rgb(32, 32, 32);
+    color: var(--dark-color);
 }
 
 .container {
     max-width: 900px;
     margin: 0 auto;
-}
-
-.dark-mode-toggle {
-    font-size: 12px;
-    font-weight: bold;
-    position: fixed;
-    top: 50%;
-    /* transform: rotate(-90deg); */
-    color:rgb(32, 32, 32);
-    background-color: white;
-    
-}
-
-#dark-mode {
-    cursor: pointer;
-    
-}
-
-#light-mode {
-    cursor: pointer;
-    display: none;
-    
 }
 
 /* nav img {
@@ -72,7 +54,7 @@ ul a {
     font-size: 12px;
     text-decoration: none;
     text-transform: uppercase;
-    color:rgb(32, 32, 32);
+    color: var(--dark-color);
     
 }
 
@@ -148,3 +130,44 @@ section {
     border-radius: 5px;;
     padding: 1px 15px;
  } */
+
+ .dark-mode-button {
+    font-size: 12px;
+    font-weight: bold;
+    position: fixed;
+    top: 50%;
+    /* transform: rotate(-90deg); */
+    /* padding-right: 30px; */
+    left: -70px;
+}
+
+/* start dark mode toggle button */
+.dark-mode-button:hover {
+    left: 0px;
+}
+
+#dark-mode {
+    cursor: pointer;
+    color: white;
+    background-color: var(--dark-color);
+    padding: 10px 20px 10px 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.3);
+}
+
+#light-mode {
+    cursor: pointer;
+    display: none;
+    color: var(--dark-color);
+    background-color: white;
+    padding: 10px 20px 10px 0px;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;  
+}
+/* end dark mode toggle button */
+
+
+.skills-icon {
+    
+}
