@@ -1,9 +1,9 @@
 const darkModeToggle = document.getElementById("dark-mode");
 const lightModeToggle = document.getElementById("light-mode");
-let darkNavItem = document.getElementsByTagName("a");
+const darkNavItem = document.getElementsByTagName("a");
 
 function darkMode() {
-    document.body.style.backgroundColor = "rgb(32, 32, 32)";
+    document.body.style.backgroundColor = "rgb(39, 39, 39)";
     document.body.style.color = "white";
     darkModeToggle.style.display = "none";
     lightModeToggle.style.display = "block";
