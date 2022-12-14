@@ -1,3 +1,4 @@
+// dark mode
 const darkModeToggle = document.getElementById("dark-mode");
 const lightModeToggle = document.getElementById("light-mode");
 const darkNavItem = document.getElementsByTagName("a");
@@ -26,3 +27,10 @@ function lightMode() {
 
 lightModeToggle.onclick = lightMode;
 darkModeToggle.onclick = darkMode;  
+
+
+// current year
+const currentYear = new Date().getFullYear();
+console.log(currentYear);
+
+document.getElementById("current-year").innerHTML = currentYear;

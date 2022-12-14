@@ -48,6 +48,10 @@ ul li {
     
 }
 
+li i {
+    font-size: 22px;
+}
+
 ul a {
     margin-left: 30px;
     /* margin-right: 5px; */
@@ -69,7 +73,7 @@ ul a {
 }
 
 main {
-    padding-top: 70px;
+    /* padding-top: 70px; */
 }
 
 section {
@@ -174,4 +178,32 @@ section {
 
 .skills-icon i {
     font-size: 22px;
+}
+
+.skills-icon p {
+    font-weight: bold;
+}
+
+.skills-icon img {
+    height: 20px;
+}
+
+footer {
+    font-size: 14px;
+    margin-top: 100px;
+    /* margin-bottom: 50px; */
+    /* padding-top: 50px; */
+    height: 70px;
+    border-top: 1px solid rgb(134, 134, 134);
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+}
+
+footer i {
+    font-size: 22px;
+}
+
+footer a {
+    color: var(--dark-color);
 }
