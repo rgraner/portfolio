@@ -3,7 +3,6 @@ const darkModeToggle = document.getElementById("dark-mode");
 const lightModeToggle = document.getElementById("light-mode");
 const darkNavItem = document.getElementsByTagName("a");
 const darkNavBg = document.querySelector("header");
-console.log(darkNavBg);
 
 function darkMode() {
     document.body.style.backgroundColor = "rgb(39, 39, 39)";
@@ -11,8 +10,6 @@ function darkMode() {
     darkModeToggle.style.display = "none";
     lightModeToggle.style.display = "block";
     darkNavBg.style.backgroundColor = "rgb(39, 39, 39)";
-    // lightModeToggle.style.color= "#222";
-    // lightModeToggle.style.backgroundColor = "white";
     for (let i = 0; i < darkNavItem.length; i++) {
         darkNavItem[i].style.color = "white";
     }
@@ -35,6 +32,5 @@ darkModeToggle.onclick = darkMode;
 
 // current year
 const currentYear = new Date().getFullYear();
-console.log(currentYear);
 
 document.getElementById("current-year").innerHTML = currentYear;
