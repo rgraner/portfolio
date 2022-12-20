@@ -3,15 +3,17 @@ const darkModeButton = document.getElementById("dark-mode");
 const lightModeButton = document.getElementById("light-mode");
 const darkNavItem = document.getElementsByTagName("a");
 const darkNavBg = document.querySelector("header");
+const darkColor = "rgb(39, 39, 39)";
+const lightColor = "white";
 
 function darkMode() {
-    document.body.style.backgroundColor = "rgb(39, 39, 39)";
-    document.body.style.color = "white";
+    document.body.style.backgroundColor = darkColor;
+    document.body.style.color = lightColor;
     darkModeButton.style.display = "none";
     lightModeButton.style.display = "block";
-    darkNavBg.style.backgroundColor = "rgb(39, 39, 39)";
+    darkNavBg.style.backgroundColor = darkColor;
     for (let i = 0; i < darkNavItem.length; i++) {
-        darkNavItem[i].style.color = "white";
+        darkNavItem[i].style.color = lightColor;
     };
     localStorage.setItem("dark", "true");
 }
