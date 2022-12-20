@@ -1,33 +1,44 @@
 // dark mode
-const darkModeToggle = document.getElementById("dark-mode");
-const lightModeToggle = document.getElementById("light-mode");
+const darkModeButton = document.getElementById("dark-mode");
+const lightModeButton = document.getElementById("light-mode");
 const darkNavItem = document.getElementsByTagName("a");
 const darkNavBg = document.querySelector("header");
 
 function darkMode() {
     document.body.style.backgroundColor = "rgb(39, 39, 39)";
     document.body.style.color = "white";
-    darkModeToggle.style.display = "none";
-    lightModeToggle.style.display = "block";
+    darkModeButton.style.display = "none";
+    lightModeButton.style.display = "block";
     darkNavBg.style.backgroundColor = "rgb(39, 39, 39)";
     for (let i = 0; i < darkNavItem.length; i++) {
         darkNavItem[i].style.color = "white";
-    }
+    };
+    localStorage.setItem("dark", "true");
 }
 
 function lightMode() {
     document.body.style.backgroundColor = "";
     document.body.style.color = "";
-    darkModeToggle.style.display = "";
-    lightModeToggle.style.display = "";
+    darkModeButton.style.display = "";
+    lightModeButton.style.display = "";
     darkNavBg.style.backgroundColor = "";
     for (let i = 0; i < darkNavItem.length; i++) {
         darkNavItem[i].style.color = "";
-    } 
+    };
+    localStorage.setItem("dark", "false");
 }
 
-lightModeToggle.onclick = lightMode;
-darkModeToggle.onclick = darkMode;  
+if (localStorage.getItem("dark") === "true") {
+    darkMode();
+}
+
+if (localStorage.getItem("dark") === "false") {
+    lightMode();
+}
+
+darkModeButton.onclick = darkMode;
+lightModeButton.onclick = lightMode;
+  
 
 
 // current year
