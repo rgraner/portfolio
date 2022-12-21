@@ -42,7 +42,6 @@ darkModeButton.onclick = darkMode;
 lightModeButton.onclick = lightMode;
   
 
-
 // current year
 const currentYear = new Date().getFullYear();
 
