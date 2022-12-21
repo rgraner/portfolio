@@ -245,6 +245,10 @@ footer a {
         margin-bottom: 20px;
     }
 
+    .dark-mode-button {
+        top: 10%;
+    }
+
     footer {
         margin-top: 30px;
     }
