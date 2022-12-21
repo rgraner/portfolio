@@ -135,6 +135,7 @@ section {
     top: 50%;
     left: -70px;
     text-transform: uppercase;
+    z-index: 2;
 }
 
 /* start dark mode toggle button */
@@ -207,13 +208,13 @@ footer a {
 
 
 @media only screen and (max-width: 940px) {
-    body {
+    main {
       margin-left: 20px;
       margin-right: 20px;
     }
 
     .container-flex {
-        margin-left: 0;
+        margin-left: 20px;
         margin-right: 20px;
     }
   }
@@ -246,7 +247,7 @@ footer a {
     }
 
     .dark-mode-button {
-        top: 10%;
+        top: 100px;
     }
 
     footer {
