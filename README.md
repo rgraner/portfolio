@@ -1,4 +1,4 @@
-# Portfolio Project
+# [Portfolio Project](https://rgraner.github.io/portfolio/)
 
 This is the source code for my portfolio website. This project I am developing this as part of [Codecademy](https://www.codecademy.com/) tasks to showcase what I've been working on.
 ## Built with
